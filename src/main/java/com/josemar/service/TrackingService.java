@@ -11,7 +11,7 @@ import java.util.List;
 @ApplicationScoped
 public class TrackingService {
 
-    private static final int MINUS_MINUTES = 15;
+    private static final int MINUS_MINUTES = 10;
     @RestClient JeapRioClient client;
 
     public List<BusLocation> retreiveTrackLocation(String lineId){

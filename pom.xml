@@ -73,6 +73,10 @@
       <scope>provided</scope>
       <type>zip</type>
     </dependency>
+    <dependency>
+      <groupId>io.opentracing.contrib</groupId>
+      <artifactId>opentracing-mongo-common</artifactId>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
