@@ -6,6 +6,7 @@ import com.josemar.repository.LinesRepository;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.util.List;
+
 @ApplicationScoped
 public class LinesService {
 

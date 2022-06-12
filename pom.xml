@@ -50,10 +50,6 @@
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-smallrye-metrics</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>io.quarkus</groupId>
       <artifactId>quarkus-smallrye-opentracing</artifactId>
     </dependency>
     <dependency>
@@ -72,10 +68,6 @@
       <version>7.7.0</version>
       <scope>provided</scope>
       <type>zip</type>
-    </dependency>
-    <dependency>
-      <groupId>io.opentracing.contrib</groupId>
-      <artifactId>opentracing-mongo-common</artifactId>
     </dependency>
   </dependencies>
   <build>
