@@ -1,6 +1,6 @@
 package com.josemar.repository;
 
-import com.josemar.model.Lines;
+import com.josemar.model.Routes;
 import com.mongodb.client.MongoCollection;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -9,13 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 @ApplicationScoped
-public class LinesRepository {
+public class RoutesRepository {
 
-    @Inject MongoCollection<Lines> collectionLines;
+    @Inject MongoCollection<Routes> collectionLines;
 
-    public List<Lines> get() {
+    public List<Routes> get() {
         var cursor = collectionLines.find().iterator();
-        var listLines = new ArrayList<Lines>();
+        var listLines = new ArrayList<Routes>();
 
         while (cursor.hasNext()){
             listLines.add(cursor.next());

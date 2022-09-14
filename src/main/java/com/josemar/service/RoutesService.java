@@ -1,18 +1,19 @@
 package com.josemar.service;
 
-import com.josemar.model.Lines;
-import com.josemar.repository.LinesRepository;
+import com.josemar.model.Routes;
+import com.josemar.repository.RoutesRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.util.List;
 
 @ApplicationScoped
-public class LinesService {
+public class RoutesService {
 
-    @Inject LinesRepository repository;
+    @Inject
+    RoutesRepository repository;
 
-    public List<Lines> getAll() {
+    public List<Routes> getAll() {
         return repository.get();
     }
 }

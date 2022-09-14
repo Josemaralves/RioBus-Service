@@ -1,6 +1,6 @@
 package com.josemar.configuration;
 
-import com.josemar.model.Lines;
+import com.josemar.model.Routes;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 
@@ -11,13 +11,13 @@ import javax.inject.Singleton;
 @Dependent
 public class MongoConfiguration {
 
-    private static final String DATABASE = "rioBus";
-    private static final String LINES = "lines";
+    private static final String DATABASE = "rio_bus";
+    private static final String ROUTES = "routes";
     @Inject MongoClient mongoClient;
 
     @Singleton
-    public MongoCollection<Lines> getLinesCollection(){
-        return mongoClient.getDatabase(DATABASE).getCollection(LINES, Lines.class);
+    public MongoCollection<Routes> getRoutesCollection(){
+        return mongoClient.getDatabase(DATABASE).getCollection(ROUTES, Routes.class);
     }
 
 }
