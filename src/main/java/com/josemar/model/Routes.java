@@ -2,18 +2,18 @@ package com.josemar.model;
 
 public class Routes {
 
-    private String id;
+    private String idroute;
     private String longname;
     private String shortname;
     private String agencyid;
     private String agencyname;
 
-    public String getId() {
-        return id;
+    public String getIdroute() {
+        return idroute;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setIdroute(String idroute) {
+        this.idroute = idroute;
     }
 
     public String getLongname() {
