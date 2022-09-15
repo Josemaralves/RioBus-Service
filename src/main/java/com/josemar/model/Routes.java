@@ -2,49 +2,49 @@ package com.josemar.model;
 
 public class Routes {
 
-    private String idroute;
-    private String longname;
-    private String shortname;
-    private String agencyid;
-    private String agencyname;
+    private String idRoute;
+    private String longName;
+    private String shortName;
+    private String agencyId;
+    private String agencyName;
 
-    public String getIdroute() {
-        return idroute;
+    public String getIdRoute() {
+        return idRoute;
     }
 
-    public void setIdroute(String idroute) {
-        this.idroute = idroute;
+    public void setIdRoute(String idRoute) {
+        this.idRoute = idRoute;
     }
 
-    public String getLongname() {
-        return longname;
+    public String getLongName() {
+        return longName;
     }
 
-    public void setLongname(String longname) {
-        this.longname = longname;
+    public void setLongName(String longName) {
+        this.longName = longName;
     }
 
-    public String getShortname() {
-        return shortname;
+    public String getShortName() {
+        return shortName;
     }
 
-    public void setShortname(String shortname) {
-        this.shortname = shortname;
+    public void setShortName(String shortName) {
+        this.shortName = shortName;
     }
 
-    public String getAgencyid() {
-        return agencyid;
+    public String getAgencyId() {
+        return agencyId;
     }
 
-    public void setAgencyid(String agencyid) {
-        this.agencyid = agencyid;
+    public void setAgencyId(String agencyId) {
+        this.agencyId = agencyId;
     }
 
-    public String getAgencyname() {
-        return agencyname;
+    public String getAgencyName() {
+        return agencyName;
     }
 
-    public void setAgencyname(String agencyname) {
-        this.agencyname = agencyname;
+    public void setAgencyName(String agencyName) {
+        this.agencyName = agencyName;
     }
 }
