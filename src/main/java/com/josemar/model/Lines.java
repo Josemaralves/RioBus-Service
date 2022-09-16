@@ -3,8 +3,8 @@ package com.josemar.model;
 public class Lines {
 
     private String shapeId;
-    private Integer latitude;
-    private Integer longitude;
+    private Float latitude;
+    private Float longitude;
     private Integer sequence;
     private String routeId;
 
@@ -16,19 +16,19 @@ public class Lines {
         this.shapeId = shapeId;
     }
 
-    public Integer getLatitude() {
+    public Float getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Integer latitude) {
+    public void setLatitude(Float latitude) {
         this.latitude = latitude;
     }
 
-    public Integer getLongitude() {
+    public Float getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(Integer longitude) {
+    public void setLongitude(Float longitude) {
         this.longitude = longitude;
     }
 
