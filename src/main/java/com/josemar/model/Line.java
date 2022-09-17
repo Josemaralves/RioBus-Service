@@ -10,7 +10,7 @@ public class Line {
     private String agencyId;
     private String agencyName;
     private List<Itinerary> itineraries;
-    private List<String> stops;
+    private List<Stop> stops;
 
     public String getIdRoute() {
         return idRoute;
@@ -60,11 +60,11 @@ public class Line {
         this.itineraries = itineraries;
     }
 
-    public List<String> getStops() {
+    public List<Stop> getStops() {
         return stops;
     }
 
-    public void setStops(List<String> stops) {
+    public void setStops(List<Stop> stops) {
         this.stops = stops;
     }
 }

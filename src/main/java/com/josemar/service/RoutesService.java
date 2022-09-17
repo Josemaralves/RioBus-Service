@@ -17,7 +17,7 @@ public class RoutesService {
         return repository.get();
     }
 
-    public List<Line> getById(String id) {
+    public Line getById(String id) {
         return repository.getById(id);
     }
 }

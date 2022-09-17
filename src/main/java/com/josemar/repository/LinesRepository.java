@@ -2,6 +2,7 @@ package com.josemar.repository;
 
 import com.josemar.model.Line;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.model.Aggregates;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Projections;
 import org.bson.conversions.Bson;
@@ -14,7 +15,9 @@ import java.util.List;
 @ApplicationScoped
 public class LinesRepository {
 
+    private static final String ID_ROUTE = "idRoute";
     private static final Bson EXCLUDE_FIELDS = Projections.exclude("itineraries", "stops");
+    private static final Bson LOOKUP_STOP = Aggregates.lookup("stops", "stops", "stopId","stops");
 
     @Inject MongoCollection<Line> collectionLines;
 
@@ -28,13 +31,9 @@ public class LinesRepository {
         return listLines;
     }
 
-    public List<Line> getById(String id) {
-        var listLines = new ArrayList<Line>();
+    public Line getById(String id) {
+        var matchId = Aggregates.match(Filters.eq(ID_ROUTE, id));
 
-        for (Line line : collectionLines.find(Filters.eq("idRoute", id))) {
-            listLines.add(line);
-        }
-
-        return listLines;
+        return collectionLines.aggregate(List.of(matchId,LOOKUP_STOP)).first();
     }
 }

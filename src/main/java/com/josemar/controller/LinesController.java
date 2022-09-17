@@ -22,7 +22,7 @@ public class LinesController {
 
     @GET
     @Path("/{lineid}")
-    public List<Line> getLine(@PathParam("lineid") String id){
+    public Line getLine(@PathParam("lineid") String id){
         return routesService.getById(id);
     }
 
