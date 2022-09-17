@@ -1,7 +1,7 @@
 package com.josemar.configuration;
 
-import com.josemar.model.Lines;
-import com.josemar.model.Routes;
+import com.josemar.model.Line;
+import com.josemar.model.Stop;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 
@@ -13,18 +13,19 @@ import javax.inject.Singleton;
 public class MongoConfiguration {
 
     private static final String DATABASE = "rio_bus";
-    private static final String ROUTES = "routes";
-    private static final String LINES = "shapes";
+    private static final String LINES = "lines";
+    private static final String STOPS = "stops";
+
     @Inject MongoClient mongoClient;
 
     @Singleton
-    public MongoCollection<Routes> getRoutesCollection(){
-        return mongoClient.getDatabase(DATABASE).getCollection(ROUTES, Routes.class);
+    public MongoCollection<Line> getLinesCollection(){
+        return mongoClient.getDatabase(DATABASE).getCollection(LINES, Line.class);
     }
 
     @Singleton
-    public MongoCollection<Lines> getLinesCollection(){
-        return mongoClient.getDatabase(DATABASE).getCollection(LINES, Lines.class);
+    public MongoCollection<Stop> getStopsCollection(){
+        return mongoClient.getDatabase(DATABASE).getCollection(STOPS, Stop.class);
     }
 
 }

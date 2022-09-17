@@ -1,6 +1,6 @@
 package com.josemar.controller;
 
-import com.josemar.model.BusLocation;
+import com.josemar.model.Track;
 import com.josemar.service.TrackingService;
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
 
@@ -16,7 +16,7 @@ public class TrackingController {
 
     @GET
     @Path("/{lineId}")
-    public List<BusLocation> getTrackLocation(@PathParam String lineId){
+    public List<Track> getTrackLocation(@PathParam String lineId){
         return trackingService.retreiveTrackLocation(lineId);
     }
 

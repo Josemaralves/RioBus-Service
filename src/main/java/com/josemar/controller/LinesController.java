@@ -1,7 +1,7 @@
 package com.josemar.controller;
 
-import com.josemar.model.Lines;
-import com.josemar.service.LinesService;
+import com.josemar.model.Line;
+import com.josemar.service.RoutesService;
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
 
 import javax.inject.Inject;
@@ -13,12 +13,17 @@ import java.util.List;
 public class LinesController {
 
     @Inject
-    LinesService service;
+    RoutesService routesService;
 
     @GET
-    @Path("/{lineId}")
-    public List<Lines> getLineById(@PathParam String lineId){
-        return service.getLineById(lineId);
+    public List<Line> getLines(){
+        return routesService.getAll();
+    }
+
+    @GET
+    @Path("/{lineid}")
+    public List<Line> getLine(@PathParam("lineid") String id){
+        return routesService.getById(id);
     }
 
 }

@@ -1,6 +1,6 @@
 package com.josemar.rest.client;
 
-import com.josemar.model.BusLocation;
+import com.josemar.model.Track;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
 
@@ -14,6 +14,6 @@ public interface JeapRioClient {
 
     @GET
     @Path("/transporte/veiculos/onibus2/{lineId}")
-    List<BusLocation> getBusLocations(@PathParam String lineId);
+    List<Track> getBusLocations(@PathParam String lineId);
 
 }

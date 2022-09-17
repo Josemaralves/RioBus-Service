@@ -1,20 +1,10 @@
 package com.josemar.model;
 
-public class Lines {
+public class Itinerary {
 
-    private String shapeId;
     private Float latitude;
     private Float longitude;
     private Integer sequence;
-    private String routeId;
-
-    public String getShapeId() {
-        return shapeId;
-    }
-
-    public void setShapeId(String shapeId) {
-        this.shapeId = shapeId;
-    }
 
     public Float getLatitude() {
         return latitude;
@@ -40,11 +30,4 @@ public class Lines {
         this.sequence = sequence;
     }
 
-    public String getRouteId() {
-        return routeId;
-    }
-
-    public void setRouteId(String routeId) {
-        this.routeId = routeId;
-    }
 }

@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
     "dataHora"
 })
 @Generated("jsonschema2pojo")
-public class BusLocation {
+public class Track {
 
     @JsonProperty("ordem")
     private String ordem;

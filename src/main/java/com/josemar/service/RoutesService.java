@@ -1,7 +1,7 @@
 package com.josemar.service;
 
-import com.josemar.model.Routes;
-import com.josemar.repository.RoutesRepository;
+import com.josemar.model.Line;
+import com.josemar.repository.LinesRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -11,9 +11,13 @@ import java.util.List;
 public class RoutesService {
 
     @Inject
-    RoutesRepository repository;
+    LinesRepository repository;
 
-    public List<Routes> getAll() {
+    public List<Line> getAll() {
         return repository.get();
+    }
+
+    public List<Line> getById(String id) {
+        return repository.getById(id);
     }
 }

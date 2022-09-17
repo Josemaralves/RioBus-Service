@@ -1,12 +1,16 @@
 package com.josemar.model;
 
-public class Routes {
+import java.util.List;
+
+public class Line {
 
     private String idRoute;
     private String longName;
     private String shortName;
     private String agencyId;
     private String agencyName;
+    private List<Itinerary> itineraries;
+    private List<String> stops;
 
     public String getIdRoute() {
         return idRoute;
@@ -46,5 +50,21 @@ public class Routes {
 
     public void setAgencyName(String agencyName) {
         this.agencyName = agencyName;
+    }
+
+    public List<Itinerary> getItineraries() {
+        return itineraries;
+    }
+
+    public void setItineraries(List<Itinerary> itineraries) {
+        this.itineraries = itineraries;
+    }
+
+    public List<String> getStops() {
+        return stops;
+    }
+
+    public void setStops(List<String> stops) {
+        this.stops = stops;
     }
 }
