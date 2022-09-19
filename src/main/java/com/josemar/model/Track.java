@@ -25,9 +25,9 @@ public class Track {
     @JsonProperty("linha")
     private String linha;
     @JsonProperty("latitude")
-    private String latitude;
+    private Float latitude;
     @JsonProperty("longitude")
-    private String longitude;
+    private Float longitude;
     @JsonProperty("velocidade")
     private String velocidade;
     @JsonFormat(pattern = "MM-dd-yyyy HH:mm:ss")
@@ -55,22 +55,22 @@ public class Track {
     }
 
     @JsonProperty("latitude")
-    public String getLatitude() {
+    public Float getLatitude() {
         return latitude;
     }
 
     @JsonProperty("latitude")
-    public void setLatitude(String latitude) {
+    public void setLatitude(Float latitude) {
         this.latitude = latitude;
     }
 
     @JsonProperty("longitude")
-    public String getLongitude() {
+    public Float getLongitude() {
         return longitude;
     }
 
     @JsonProperty("longitude")
-    public void setLongitude(String longitude) {
+    public void setLongitude(Float longitude) {
         this.longitude = longitude;
     }
 
