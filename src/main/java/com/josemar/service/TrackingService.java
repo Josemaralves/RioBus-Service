@@ -16,7 +16,7 @@ public class TrackingService {
 
     public List<Track> retreiveTrackLocation(String lineId){
         List<Track> locations = client.getBusLocations(lineId);
-        locations = LocationUtils.removeOutdatedLocations(locations, MINUS_MINUTES);
+//        locations = LocationUtils.removeOutdatedLocations(locations, MINUS_MINUTES);
 
         return locations;
     }
