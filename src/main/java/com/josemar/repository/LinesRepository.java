@@ -31,9 +31,14 @@ public class LinesRepository {
         return listLines;
     }
 
-    public Line getById(String id) {
-        var matchId = Aggregates.match(Filters.eq(ID_ROUTE, id));
-
+    public Line getById(String idRoute, String lineId) {
+        Bson matchId;
+        if (idRoute!=null){
+            matchId = Aggregates.match(Filters.eq(ID_ROUTE, idRoute));
+        }else{
+            matchId = Aggregates.match(Filters.eq("shortName", lineId));
+        }
         return collectionLines.aggregate(List.of(matchId,LOOKUP_STOP)).first();
+
     }
 }

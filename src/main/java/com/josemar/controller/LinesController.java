@@ -3,6 +3,7 @@ package com.josemar.controller;
 import com.josemar.model.Line;
 import com.josemar.service.RoutesService;
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
+import org.jboss.resteasy.annotations.jaxrs.QueryParam;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -21,9 +22,8 @@ public class LinesController {
     }
 
     @GET
-    @Path("/{lineid}")
-    public Line getLine(@PathParam("lineid") String id){
-        return routesService.getById(id);
+    public Line getLine(@QueryParam("routeId") String routeId, @QueryParam("lineId") String lineId){
+        return routesService.getById(routeId, lineId);
     }
 
 }
