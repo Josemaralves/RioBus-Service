@@ -17,7 +17,11 @@ public class RoutesService {
         return repository.get();
     }
 
-    public Line getById(String routeId, String lineId) {
+    public List<Line> getById(String routeId, String lineId) {
+        if (routeId == null && lineId == null){
+            return repository.get();
+        }
+
         return repository.getById(routeId, lineId);
     }
 }

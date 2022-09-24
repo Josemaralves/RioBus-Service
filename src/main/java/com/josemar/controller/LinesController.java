@@ -16,13 +16,13 @@ public class LinesController {
     @Inject
     RoutesService routesService;
 
-    @GET
-    public List<Line> getLines(){
-        return routesService.getAll();
-    }
+//    @GET
+//    public List<Line> getLines(){
+//        return routesService.getAll();
+//    }
 
     @GET
-    public Line getLine(@QueryParam("routeId") String routeId, @QueryParam("lineId") String lineId){
+    public List<Line> getLine(@QueryParam("routeId") String routeId, @QueryParam("lineId") String lineId){
         return routesService.getById(routeId, lineId);
     }
 

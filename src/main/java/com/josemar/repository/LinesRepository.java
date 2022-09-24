@@ -10,6 +10,8 @@ import org.bson.conversions.Bson;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 @ApplicationScoped
@@ -31,14 +33,14 @@ public class LinesRepository {
         return listLines;
     }
 
-    public Line getById(String idRoute, String lineId) {
+    public List<Line> getById(String idRoute, String lineId) {
         Bson matchId;
         if (idRoute!=null){
             matchId = Aggregates.match(Filters.eq(ID_ROUTE, idRoute));
         }else{
             matchId = Aggregates.match(Filters.eq("shortName", lineId));
         }
-        return collectionLines.aggregate(List.of(matchId,LOOKUP_STOP)).first();
+        return Collections.singletonList(collectionLines.aggregate(List.of(matchId, LOOKUP_STOP)).first());
 
     }
 }
